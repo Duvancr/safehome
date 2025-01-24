@@ -1,0 +1,975 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b7d92fb28a8ba6a1",
+        "type": "mqtt-broker",
+        "name": "MQTTANDINA",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "clienteunicosafehomenuevo",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "60fdcf88b69e4e56",
+        "type": "ui_tab",
+        "name": "Monitoreo",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2f23dd4e89ba370a",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "SAFE HOME MONITOREO",
+            "hideToolbar": "true",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "a2308bd29c54cc53",
+        "type": "ui_group",
+        "name": "SAFE HOME",
+        "tab": "60fdcf88b69e4e56",
+        "order": 1,
+        "disp": true,
+        "width": "18",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "b815e9e6cd1e8dcf",
+        "type": "firebase config",
+        "firebaseurl": "proyecto-diplomado-areandina-default-rtdb",
+        "loginType": "none"
+    },
+    {
+        "id": "356fd2b4cacccfa8",
+        "type": "influxdb",
+        "hostname": "http://localhost",
+        "port": 8086,
+        "protocol": "http",
+        "database": "database",
+        "name": "Influxdb",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://172.17.0.3:8086",
+        "timeout": 10,
+        "rejectUnauthorized": false
+    },
+    {
+        "id": "63809a8faf1a776f",
+        "type": "telegram bot",
+        "botname": "botsafehome_bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": 300,
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": 8443,
+        "publicbotport": 8443,
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "3e9bb1e75e38d517",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "de7c8e2a82264d82",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "SENSORES",
+        "topic": "andina/diplomado/safehome",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "b7d92fb28a8ba6a1",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "3e9bb1e75e38d517",
+                "0d4b14a94f3d3a63",
+                "4847788cc409bdb1",
+                "267e5ac4b84bb946",
+                "df71fcdde7161341",
+                "5dadab0c438af1d5"
+            ]
+        ]
+    },
+    {
+        "id": "0d4b14a94f3d3a63",
+        "type": "json",
+        "z": "f6f2187d.f17ca8",
+        "name": "PPM",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 390,
+        "y": 340,
+        "wires": [
+            [
+                "dfa9d84c7698f5f7",
+                "0f7f3346e6ea026a"
+            ]
+        ]
+    },
+    {
+        "id": "4847788cc409bdb1",
+        "type": "json",
+        "z": "f6f2187d.f17ca8",
+        "name": "Temperatura",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 410,
+        "y": 480,
+        "wires": [
+            [
+                "364601c4c74639fc",
+                "a8bf7a5efe04ae36"
+            ]
+        ]
+    },
+    {
+        "id": "267e5ac4b84bb946",
+        "type": "json",
+        "z": "f6f2187d.f17ca8",
+        "name": "Estado",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 400,
+        "y": 240,
+        "wires": [
+            [
+                "9ae945e4cd5a3ee6",
+                "7ab1b5d91d49f314"
+            ]
+        ]
+    },
+    {
+        "id": "dfa9d84c7698f5f7",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "PPM",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.PPM",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 340,
+        "wires": [
+            [
+                "0581ce6fcee4d34f",
+                "fb7b6d694b32d324",
+                "07fafaca30c6582c"
+            ]
+        ]
+    },
+    {
+        "id": "364601c4c74639fc",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Temperatura",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 480,
+        "wires": [
+            [
+                "8217c446b07a208e",
+                "3c175d8a8695b5f6",
+                "4a02b09a10b11a02"
+            ]
+        ]
+    },
+    {
+        "id": "9ae945e4cd5a3ee6",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Estado",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Estado",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 240,
+        "wires": [
+            [
+                "6481c97be2fe7f2a"
+            ]
+        ]
+    },
+    {
+        "id": "0581ce6fcee4d34f",
+        "type": "ui_gauge",
+        "z": "f6f2187d.f17ca8",
+        "name": "Particulas por millón",
+        "group": "a2308bd29c54cc53",
+        "order": 2,
+        "width": "6",
+        "height": "5",
+        "gtype": "gage",
+        "title": "PPM",
+        "label": "ppm",
+        "format": "{{value}}",
+        "min": "100",
+        "max": "1500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 740,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "8217c446b07a208e",
+        "type": "ui_gauge",
+        "z": "f6f2187d.f17ca8",
+        "name": "Temperatura",
+        "group": "a2308bd29c54cc53",
+        "order": 4,
+        "width": "6",
+        "height": "5",
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-40",
+        "max": "80",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "30",
+        "seg2": "60",
+        "diff": false,
+        "className": "",
+        "x": 750,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "6481c97be2fe7f2a",
+        "type": "ui_text",
+        "z": "f6f2187d.f17ca8",
+        "group": "a2308bd29c54cc53",
+        "order": 1,
+        "width": "18",
+        "height": "3",
+        "name": "Estado",
+        "label": "Estado: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "55",
+        "color": "#ffffff",
+        "x": 740,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "df71fcdde7161341",
+        "type": "firebase modify",
+        "z": "f6f2187d.f17ca8",
+        "name": "Firebase",
+        "firebaseconfig": "b815e9e6cd1e8dcf",
+        "childpath": "dato",
+        "method": "push",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 400,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c175d8a8695b5f6",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "H temp",
+        "group": "a2308bd29c54cc53",
+        "order": 5,
+        "width": "12",
+        "height": "5",
+        "label": "Historico temperatura",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-40",
+        "ymax": "80",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": true,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2caf2c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 920,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fb7b6d694b32d324",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "H PPM",
+        "group": "a2308bd29c54cc53",
+        "order": 3,
+        "width": "12",
+        "height": "5",
+        "label": "Historico PPM",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "100",
+        "ymax": "1500",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 920,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5dadab0c438af1d5",
+        "type": "json",
+        "z": "f6f2187d.f17ca8",
+        "name": "Humedad",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 380,
+        "y": 580,
+        "wires": [
+            [
+                "f3dc72b219d6b007",
+                "edaee28fab7775cb"
+            ]
+        ]
+    },
+    {
+        "id": "f3dc72b219d6b007",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Humedad",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.Humedad",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 580,
+        "wires": [
+            [
+                "2e5b6a298ce24a14",
+                "56acd58ff31632d4"
+            ]
+        ]
+    },
+    {
+        "id": "2e5b6a298ce24a14",
+        "type": "ui_gauge",
+        "z": "f6f2187d.f17ca8",
+        "name": "Humedad",
+        "group": "a2308bd29c54cc53",
+        "order": 6,
+        "width": "6",
+        "height": "5",
+        "gtype": "gage",
+        "title": "Humedad",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 700,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "56acd58ff31632d4",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "H Hum",
+        "group": "a2308bd29c54cc53",
+        "order": 7,
+        "width": "12",
+        "height": "5",
+        "label": "Historico Humedad",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": true,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2caf2c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 880,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "24c080ac30898fb4",
+        "type": "telegram receiver",
+        "z": "f6f2187d.f17ca8",
+        "name": "BOT",
+        "bot": "63809a8faf1a776f",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "x": 190,
+        "y": 720,
+        "wires": [
+            [
+                "70c5c2cbaa4e52c2"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "70c5c2cbaa4e52c2",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "Comando",
+        "property": "payload.content",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "estado",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 360,
+        "y": 720,
+        "wires": [
+            [
+                "70b56adef18d1121"
+            ]
+        ]
+    },
+    {
+        "id": "70b56adef18d1121",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Recopilar datos",
+        "func": "let temperatura = global.get('Temperatura') || 0;\nlet humedad = global.get('Humedad') || 0;\nlet ppm = global.get('PPM') || 0;\nlet estado = global.get('Estado') || 0;\n\nlet mensaje = `Estado actual: ${estado}\n- Temperatura: ${temperatura} °C\n- Humedad: ${humedad} %\n- PPM: ${ppm}`;\n\nmsg.payload = {\n    \"chatId\": 5138717343,\n    \"type\": \"message\",\n    \"content\": mensaje\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 720,
+        "wires": [
+            [
+                "44a0c1fddd1ff720"
+            ]
+        ]
+    },
+    {
+        "id": "44a0c1fddd1ff720",
+        "type": "telegram sender",
+        "z": "f6f2187d.f17ca8",
+        "name": "Enviar mensaje",
+        "bot": "63809a8faf1a776f",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 780,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a8bf7a5efe04ae36",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Guardar Temperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Temperatura",
+                "pt": "global",
+                "to": "payload.Temperatura",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "edaee28fab7775cb",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Guardar Humedad",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Humedad",
+                "pt": "global",
+                "to": "payload.Humedad",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0f7f3346e6ea026a",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Guardar PPM",
+        "rules": [
+            {
+                "t": "set",
+                "p": "PPM",
+                "pt": "global",
+                "to": "payload.PPM",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "07fafaca30c6582c",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "Alerta",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "500",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 710,
+        "y": 380,
+        "wires": [
+            [
+                "a84cb32f62014493"
+            ]
+        ]
+    },
+    {
+        "id": "d0a54f68c142a8b1",
+        "type": "telegram sender",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "bot": "63809a8faf1a776f",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1110,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a84cb32f62014493",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Recopilar datos",
+        "func": "let temperatura = global.get('Temperatura') || 0;\nlet humedad = global.get('Humedad') || 0;\nlet ppm = global.get('PPM') || 0;\nlet estado = '';\nif (ppm >= 500 && ppm < 1000){\n    estado = `¡Atención! Se ha detectado una fuga de gas que supera los limites de seguridad:\n                - PPM: ${ppm}\n                - Temperatura: ${temperatura} °C\n                - Humedad: ${humedad} %`;\n} else if (ppm > 1000){\n    estado = `Peligro! Se ha detectado una fuga de gas crítica:\n                - PPM: ${ppm}\n                - Temperatura: ${temperatura} °C\n                - Humedad: ${humedad} %`;\n}\n\n\nmsg.payload = {\n    \"chatId\": 5138717343,\n    \"type\": \"message\",\n    \"content\": estado\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 380,
+        "wires": [
+            [
+                "d0a54f68c142a8b1"
+            ]
+        ]
+    },
+    {
+        "id": "7ab1b5d91d49f314",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Guardar Estado",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Estado",
+                "pt": "global",
+                "to": "payload.Estado",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a02b09a10b11a02",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "Alerta",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "30",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 520,
+        "wires": [
+            [
+                "27e750d1044ce4ca"
+            ]
+        ]
+    },
+    {
+        "id": "3d20489bbded6ab4",
+        "type": "telegram sender",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "bot": "63809a8faf1a776f",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1130,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "27e750d1044ce4ca",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Recopilar datos",
+        "func": "let temperatura = global.get('Temperatura') || 0;\nlet humedad = global.get('Humedad') || 0;\nlet ppm = global.get('PPM') || 0;\nlet estado = '';\nif (temperatura >= 30 && temperatura <= 35){\n    estado = `¡Atención! La Temperatura ha superado el límite de seguridad:\n                - Temperatura: ${temperatura} °C\n                - PPM: ${ppm}\n                - Humedad: ${humedad} %`;\n} else if (temperatura > 35){\n    estado = `¡Peligro! La Temperatura está alta:\n                - Temperatura: ${temperatura} °C\n                - PPM: ${ppm}\n                - Humedad: ${humedad} %`;\n}\n\n\nmsg.payload = {\n    \"chatId\": 5138717343,\n    \"type\": \"message\",\n    \"content\": estado\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 520,
+        "wires": [
+            [
+                "3d20489bbded6ab4"
+            ]
+        ]
+    }
+]
